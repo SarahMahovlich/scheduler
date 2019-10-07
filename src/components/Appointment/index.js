@@ -60,7 +60,6 @@ export default function Appointment({ time, id, interview, interviewers, onAdd, 
   }
 
   function onConfirm() {
-    
     transition(DELETING, true);
 
     cancelInterview(id)

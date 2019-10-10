@@ -1,5 +1,7 @@
 # Interview Scheduler
 
+!["Add, Edit and Delete"](https://github.com/SarahMahovlich/scheduler/blob/master/docs/Add_edit_delete.gif?raw=true)
+
 ## Setup
 
 Install dependencies with `npm install`.

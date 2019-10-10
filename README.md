@@ -1,5 +1,9 @@
 # Interview Scheduler
 
+Interview Scheduler is a single page application, built with React. 
+
+Adding a new appointment, editing an appointment and deleting an appointment is depicted below. 
+
 !["Add, Edit and Delete"](https://github.com/SarahMahovlich/scheduler/blob/master/docs/Add_edit_delete.gif?raw=true)
 
 ## Setup

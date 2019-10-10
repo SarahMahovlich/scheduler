@@ -1,11 +1,7 @@
-import { useEffect, useState, useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import axios from "axios";
 
-import reducer, {
-  setDay,
-  setApplicationData,
-  setInterview
-} from "reducers/application";
+import reducer from "reducers/application";
 
 export function useApplicationData() {
 
@@ -41,14 +37,14 @@ export function useApplicationData() {
       0
     );
 
-  const days = state.days.map(day => {
-    return day.appointments.includes(id)
-      ? {
-          ...day,
-          spots: getSpotsForDay(day)
-        }
-      : day;
-  });
+    const days = state.days.map(day => {
+      return day.appointments.includes(id)
+        ? {
+            ...day,
+            spots: getSpotsForDay(day)
+          }
+        : day;
+    });
 
     return axios.put(`/api/appointments/${id}`, { interview })
     .then(() => dispatchStateInfo({type: "setInterview", value: { appointments, days }}))
@@ -95,10 +91,8 @@ export function useApplicationData() {
       Promise.resolve(axios.get(`/api/interviewers`))
     ]).then((all) => {
       dispatchStateInfo({type: "setApplicationData", value: { days: all[0].data, appointments: all[1].data, interviewers: all[2].data } });
-      // setState(prev => ({ ...prev, days: all[0].data, appointments: all[1].data, interviewers: all[2].data }));
     })
   }, []);
 
   return { state, setDay, bookInterview, cancelInterview }
-
 }

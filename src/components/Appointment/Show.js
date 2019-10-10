@@ -28,5 +28,4 @@ export default function Show({ student, interviewer, onEdit, onDelete }) {
     </section>
   </main>
   );
-
 }

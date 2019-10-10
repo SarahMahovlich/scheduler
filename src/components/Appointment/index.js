@@ -19,7 +19,7 @@ const EDIT = "EDIT";
 const ERROR_SAVE = "ERROR_SAVE";
 const ERROR_DELETE = "ERROR_DELETE";
 
-export default function Appointment({ time, id, interview, interviewers, onAdd, onSave, onCancel, bookInterview, onDelete, cancelInterview, onConfirm }) {
+export default function Appointment({ time, id, interview, interviewers, bookInterview, cancelInterview }) {
   const[interviewInfo, setInterview] = useState({})
 
   const { mode, transition, back } = useVisualMode (

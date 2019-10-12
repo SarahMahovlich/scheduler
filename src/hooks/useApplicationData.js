@@ -17,7 +17,7 @@ export function useApplicationData() {
     initialStateInfo
   );
 
-  const setDay = day => dispatchStateInfo({type: "setDay", value: day}); /*setState({ ...state, day });*/
+  const setDay = day => dispatchStateInfo({type: "setDay", value: day});
 
   function bookInterview(id, interview) {
    
